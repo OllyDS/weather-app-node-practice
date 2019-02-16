@@ -10,7 +10,7 @@ const getWeather = (lat, lng, callback) => {
         if (!error && response.statusCode === 200) {
             callback({
                 temperature: body.currently.temperature,
-                apparentTemp: body.currently.apparentTemperature
+                apparentTemperature: body.currently.apparentTemperature
             })
         } else {
             callback('Error - Unable to fetch weather. Please re-check inputs')
